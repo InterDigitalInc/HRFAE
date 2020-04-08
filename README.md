@@ -20,7 +20,7 @@ conda env create -f env.yml
 
 ## Load and test pretrained network 
 
-1. Download the [pretrained model](https://partage.imt.fr/index.php/s/8XokzX8wbtAKznN) to the folder `logs/001/`.
+1. Download the [pretrained model](https://partage.imt.fr/index.php/s/rXyiDj6xR9irJ6z) to the folder `logs/001/`.
 
 2. Upload test images in the folder `/test/input` and run the test file. The output images will be saved in the folder `/test/output`.
     ```
@@ -40,7 +40,7 @@ conda env create -f env.yml
 
     Download [FFHQ](https://github.com/NVlabs/ffhq-dataset) dataset and unzip it to the `/data/ffhq` directory. 
     
-    Download [age label](https://partage.imt.fr/index.php/s/nBCzEqi3KgSp276) to the `/data` directory.
+    Download [age label](https://partage.imt.fr/index.php/s/DbSk4HzFkeCYXDt) to the `/data` directory.
 
     You can also train the model with your own dataset. Put your images in the `/data` directory. With the pretrained classifier, you can create a new label file with the age of each image. 
 

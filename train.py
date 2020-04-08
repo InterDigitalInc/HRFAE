@@ -42,12 +42,13 @@ logger = Logger(log_dir)
 
 
 config = yaml.load(open('./configs/' + opts.config + '.yaml', 'r'))
-batch_size = config['batch_size']
 epochs = config['epochs']
-img_size = (config['input_h'], config['input_w'])
 age_min = config['age_min']
 age_max = config['age_max']
 
+# The first 10 epochs are trained on 512 x 512 images with a batch size of 4.
+batch_size = 4
+img_size = (512, 512)
 
 # Load dataset
 dataset_A = MyDataSet(age_min, age_max, opts.dataset_path, opts.label_file_path, output_size=img_size, training_set=True)
@@ -80,6 +81,13 @@ for n_epoch in range(epoch_0, epoch_0+epochs):
 
     if n_epoch == 10:
         trainer.config['w']['recon'] = 0.1*trainer.config['w']['recon']
+        # Load dataset at 1024 x 1024 resolution for the next 10 epochs
+        batch_size = config['batch_size']
+        img_size = (config['input_h'], config['input_w'])
+        dataset_A = MyDataSet(age_min, age_max, opts.dataset_path, opts.label_file_path, output_size=img_size, training_set=True)
+        dataset_B = MyDataSet(age_min, age_max, opts.dataset_path, opts.label_file_path, output_size=img_size, training_set=True)
+        loader_A = data.DataLoader(dataset_A, batch_size=batch_size, shuffle=True, num_workers=1, pin_memory=True)
+        loader_B = data.DataLoader(dataset_B, batch_size=batch_size, shuffle=True, num_workers=1, pin_memory=True)
 
     iter_B = iter(loader_B)
     for i, list_A in enumerate(loader_A):

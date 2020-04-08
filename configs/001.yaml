@@ -1,10 +1,10 @@
 # Input data
-input_w: 512                  
-input_h: 512                  
+input_w: 1024                  
+input_h: 1024                  
 age_min: 20                  
 age_max: 70  
 # Training hyperparameters                 
-batch_size: 4                 
+batch_size: 2                 
 epochs: 20    
 # Optimizer parameters               
 lr: 0.0001         
