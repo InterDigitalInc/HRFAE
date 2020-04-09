@@ -42,6 +42,7 @@ img_size = (config['input_w'], config['input_h'])
 trainer = Trainer(config)
 #trainer.initialize(opts.vgg_model_path)   
 trainer.to(device)
+trainer.dataparallel()
 
 # Load pretrained model 
 if opts.checkpoint:
