@@ -51,7 +51,7 @@ conda env create -f env.yml
     python train.py --config 001 
     ```
 
-## Reference
+## Citation
 
 ## License
 
