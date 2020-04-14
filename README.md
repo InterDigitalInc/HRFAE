@@ -55,6 +55,10 @@ conda env create -f env.yml
 
 ## License
 
+Copyright (c) 2020, InterDigital R&D France. All rights reserved.
+
+This source code is made available under the license found in the LICENSE.txt in the root directory of this source tree.
+
 
 
 
