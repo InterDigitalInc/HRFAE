@@ -24,7 +24,10 @@ torch.backends.cudnn.enabled = True
 torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = True
 Image.MAX_IMAGE_PIXELS = None
-device = torch.device('cuda')
+if torch.cuda.is_available():
+    device = torch.device('cuda')
+else:
+    device = torch.device('cpu')
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--config', type=str, default='params', help='path to the config file.')
