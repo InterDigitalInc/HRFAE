@@ -3,6 +3,8 @@
 # This source code is made available under the license found in the
 # LICENSE.txt in the root directory of this source tree.
 
+print('By installing and using this software, you agree to comply with the license terms provided on the LICENSE.txt.')
+
 import argparse
 import os
 import numpy as np
@@ -48,15 +50,14 @@ img_size = (config['input_w'], config['input_h'])
 
 # Initialize trainer
 trainer = Trainer(config)
-#trainer.initialize(opts.vgg_model_path)   
-trainer.to(device)
-trainer.dataparallel()
 
 # Load pretrained model 
 if opts.checkpoint:
     trainer.load_checkpoint(opts.checkpoint)
 else:
     trainer.load_checkpoint(log_dir + 'checkpoint')
+
+trainer.to(device)
 
 # Set target age
 target_age = opts.target_age

@@ -20,7 +20,7 @@ conda env create -f env.yml
 
 ## Load and test pretrained network 
 
-1. Download the [pretrained model](https://partage.imt.fr/index.php/s/rXyiDj6xR9irJ6z) to the folder `logs/001/`.
+1. Download the [pretrained model](https://partage.imt.fr/index.php/s/7DzqFHQggfJDw79) to the folder `logs/001/`.
 
 2. Upload test images in the folder `/test/input` and run the test file. The output images will be saved in the folder `/test/output`. You can change the desired target age with `--target_age`.
     ```
