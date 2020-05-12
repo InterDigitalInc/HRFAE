@@ -56,7 +56,15 @@ conda env create -f env.yml
     ```
 
 ## Citation
-
+```
+@article{yao2020high,
+    title   = {High Resolution Face Age Editing},
+    author  = {Xu Yao and Gilles Puy and Alasdair Newson and Yann Gousseau and Pierre Hellier},
+    journal = {CoRR},
+    volume  = {abs/2005.04410},
+    year    = {2020},
+}
+```
 ## License
 
 Copyright © 2020, InterDigital R&D France. All rights reserved.
