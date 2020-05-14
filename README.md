@@ -55,6 +55,10 @@ conda env create -f env.yml
     python train.py --config 001 
     ```
 
+## Google Colab
+
+We also provide a colab version for quick test. To run it using Google Colab, please click [here](https://colab.research.google.com/github/InterDigitalInc/HRFAE/blob/master/test.ipynb). 
+
 ## Citation
 ```
 @article{yao2020high,
