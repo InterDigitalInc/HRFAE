@@ -1,6 +1,6 @@
 ## HRFAE: High Resolution Face Age Editing
 
-Official implementation for paper *High Resolution Face Age Editing*.
+Official implementation for paper [High Resolution Face Age Editing](https://arxiv.org/pdf/2005.04410.pdf).
 
 ![Teaser image](./arch.png)
 
